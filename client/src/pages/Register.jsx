@@ -25,7 +25,7 @@ const Register = ({ signupForm, setSignupForm }) => {
 
     const handleRegister = async (formData) => {
       try {
-        const response = await axios.post('https://notes-taking-app-mern.vercel.app/signup', formData);
+        const response = await axios.post('https://book-app-eight-iota.vercel.app/signup', formData);
         console.log('Sign-up successful:', response.data);
         // navigate('/login')
         setShowLogin(true);

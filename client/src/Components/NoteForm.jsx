@@ -40,7 +40,7 @@ const NoteForm = ({ showNoteForm, setShowNoteForm, userId, getNotesData, onEdit,
                 debugger
                 const dataToSend = { ...formData }
                 const token = localStorage.getItem('token');
-                const response = await axios.put(`http://localhost:8000/update-user-notes/${formData._id}`, dataToSend, {
+                const response = await axios.put(`https://book-app-eight-iota.vercel.app/update-user-notes/${formData._id}`, dataToSend, {
                     headers: {
                         Authorization: `Bearer ${token}`,     
                     },
@@ -69,7 +69,7 @@ const NoteForm = ({ showNoteForm, setShowNoteForm, userId, getNotesData, onEdit,
                 debugger
                 const dataToSend = { ...formData, userId }
                 const token = localStorage.getItem('token');
-                const response = await axios.post(`http://localhost:8000/user-notes`, dataToSend, {
+                const response = await axios.post(`https://book-app-eight-iota.vercel.app/user-notes`, dataToSend, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

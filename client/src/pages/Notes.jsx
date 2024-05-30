@@ -47,7 +47,7 @@ const Notes = () => {
       // setUserId(storedUserId);   
 
       try {
-          const response = await axios.get("https://notes-taking-app-mern.vercel.app/getuser-notes", {
+          const response = await axios.get("https://book-app-eight-iota.vercel.app/getuser-notes", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -192,7 +192,9 @@ const Notes = () => {
           onOk: async () => {
               try {
                   const token = localStorage.getItem('token');
-                  const response = await axios.delete(`http://localhost:8000/delete-notes-data/${record._id}`, {
+                  // const response = await axios.delete(`http://localhost:8000/delete-notes-data/${record._id}`, {
+                    //https://book-app-eight-iota.vercel.app/
+                  const response = await axios.delete(`https://book-app-eight-iota.vercel.app/delete-notes-data/${record._id}`, {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },
